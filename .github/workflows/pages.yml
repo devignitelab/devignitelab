@@ -10,10 +10,10 @@ on:
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-# permissions:
-#   contents: read
-#   pages: write
-#   id-token: write
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 # Allow one concurrent deployment
 concurrency:
@@ -28,10 +28,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
-        with:
-          repo-token: ${{ secrets.TOKEN }}
+        uses: actions/configure-pages@v3
       - run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} # defaults output to '/_site'
+        env:
+          JEKYLL_ENV: production
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1 # This will automatically upload an artifact from the '/_site' directory
 
