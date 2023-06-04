@@ -23,10 +23,6 @@ concurrency:
 jobs:
   build:
     runs-on: self-hosted
-    container:
-      image: jekyll/jekyll:latest
-      env:
-        JEKYLL_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v3
