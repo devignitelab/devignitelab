@@ -24,7 +24,7 @@ jobs:
   build:
     runs-on: self-hosted
     container:
-      image: jekyll:latest
+      image: jekyll/jekyll:latest
       env:
         JEKYLL_ENV: production
     steps:
