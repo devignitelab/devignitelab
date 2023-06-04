@@ -52,12 +52,25 @@
     </div>
 
     <!-- Bootstrap bundle JS -->
+    {% if jekyll.environment == "production" %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.min.js "></script>
+    <script src=" https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js "></script>
+    <script src=" https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.4.0/dist/perfect-scrollbar.min.js "></script>
+    <script src=" https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.8.3/dist/smooth-scrollbar.min.js "></script>
+    {% endif %}
+
+    {% if jekyll.environment == "development" %}
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
-    <!--plugins-->
     <script src="/assets/plugins/simplebar/js/simplebar.min.js"></script>
     <script src="/assets/plugins/metismenu/js/metisMenu.min.js"></script>
     <script src="/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
     <script src="/assets/plugins/smooth-scrollbar/smooth-scrollbar.js"></script>
+    {% endif %}
+
+    <!--plugins-->
     <!-- <script src="/assets/js/pace.min.js"></script> -->
     <!--app-->
     <script src="/assets/js/app.js"></script>
@@ -65,7 +78,6 @@
         var p = "{{ pagecsv }}";
     </script>
     <script src="/assets/js/menu.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script> -->
     <script src="/assets/js/lunr.min.js"></script>
     <script src="/assets/js/search.js"></script>
     <script src="/assets/js/custom.js"></script>
