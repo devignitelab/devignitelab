@@ -1,6 +1,6 @@
 ---
-title: "RBAC with Azure App Service"
-date: "2021-03-11"
+title: Custom Roles with Azure App Service
+date: 2021-03-11
 categories: 
   - "azuread"
 tags: 
@@ -52,10 +52,10 @@ tags:
   }
   ```
   - Parameters
-    - Domain -Â Name of Tenant Domain
+    - Domain -A Name of Tenant Domain
     - TenantId - TenantId for the domain
-    - ClientId -Â ClientId from the App Registered Above
-    - ClientSecret -Â Client secret copied from Step 4
+    - ClientId -A ClientId from the App Registered Above
+    - ClientSecret -A Client secret copied from Step 4
 
 - Add Redirect and Signout URI's to the Registered Application
   - Change port as per your application settings
