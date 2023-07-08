@@ -24,3 +24,6 @@
 
 --- Making Links open in New Page ---
 [](){: .blank}
+
+--- Images
+![Large]({image name}.png)
